@@ -40,6 +40,7 @@ fetch("./data.json")
 
         if (item.day === today) {
             bar.classList.add("bar-today");
+            bar.setAttribute("aria-label", `${item.day}: $${item.amount} (today)`);
         }
 
 
