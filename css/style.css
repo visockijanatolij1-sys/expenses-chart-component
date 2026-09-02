@@ -288,4 +288,35 @@ html, body {
   transition: all 0.3s ease 0s;
 }
 
+@media (max-width: 555px) {
+  .bar {
+    width: 32px;
+  }
+  .bar-amount {
+    width: 55px;
+    height: 32px;
+    font-size: 14px;
+  }
+  .bar-item {
+    width: 32px;
+  }
+}
+.bar-item:hover .bar-amount {
+  display: none;
+}
+
+.bar-item:has(.bar:hover) .bar-amount {
+  display: flex;
+}
+
+.bar-item:has(.bar:hover) .bar-amount,
+.bar-item:has(.bar:focus) .bar-amount {
+  display: flex;
+}
+
+.bar:focus-visible {
+  outline: 3px solid #382314;
+  outline-offset: 3px;
+}
+
 /*# sourceMappingURL=style.css.map */

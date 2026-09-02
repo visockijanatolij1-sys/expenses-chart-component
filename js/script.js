@@ -5,8 +5,6 @@ fetch("./data.json")
     .then(response => response.json())
     .then(data => {
         console.log(data[0]);
-        console.log(data[0].day);
-        console.log(data[0].amount);
 
     const maxAmount = Math.max(...data.map(item => item.amount));
     const maxBarHeight = 150;
@@ -14,7 +12,6 @@ fetch("./data.json")
     
     const days = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
     const today = days[new Date().getDay()];
-    console.log(today);
 
 
     data.forEach((item) => {
@@ -28,6 +25,8 @@ fetch("./data.json")
 
         barItem.classList.add("bar-item");
         bar.classList.add("bar");
+        bar.setAttribute("tabindex", "0");
+        bar.setAttribute("aria-label", `${item.day}: $${item.amount}`);
         day.classList.add("bar-day");
 
         day.textContent = item.day;
