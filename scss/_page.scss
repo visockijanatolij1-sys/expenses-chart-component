@@ -95,3 +95,73 @@
         height: 40px;
     }
 }
+
+// 
+
+.balance-card{
+    width: 540px;
+    min-height: 511px;
+    border-radius: 10px;
+    background-color: variables.$white;
+    padding: 32px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.card-balance_title{
+    font-size: 32px;
+    line-height: 130%;
+    letter-spacing: 0px;
+    font-weight: 700;
+    color: variables.$brown950;
+}
+.card-balance_block{
+    width: 460px;
+    min-height: 178px;
+    border: 1px solid #333;
+}
+.card-balance_line__dark{
+    width: 100%;
+    height: 1px;
+    background-color: variables.$red100;
+}
+.card-balance_total{
+    display: flex;
+    flex-direction: column;
+}
+.total-balance-text{
+    font-size: 18px;
+    line-height: 125%;
+    letter-spacing: 0px;
+    color: variables.$brown400;
+}
+.total-balance_block{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.total-balance_number{
+    font-size: 48px;
+    line-height: 130%;
+    letter-spacing: 0px;
+    font-weight: 700;
+    color: variables.$brown950;
+}
+.total-balance_info{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+.info-balance_percent{
+    font-size: 18px;
+    line-height: 125%;
+    letter-spacing: 0px;
+    color: variables.$brown950;
+    font-weight: 700;
+}
+.info-balance_text{
+    font-size: 18px;
+    line-height: 125%;
+    letter-spacing: 0px;
+    color: variables.$brown400;
+}
