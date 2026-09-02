@@ -118,7 +118,7 @@
 .card-balance_block{
     width: 460px;
     min-height: 178px;
-    border: 1px solid #333;
+    // border: 1px solid #333;
 }
 .card-balance_line__dark{
     width: 100%;
@@ -164,4 +164,102 @@
     line-height: 125%;
     letter-spacing: 0px;
     color: variables.$brown400;
+}
+@media (max-width: 555px) {
+    .balance-card{
+        width: 350px;
+        padding: 24px 16px;
+    }
+    .card-balance_block{
+        width: 275px;
+    }
+    .card-balance_title{
+        font-size: 24px;
+        line-height: 130%;
+    }
+    .total-balance-text{
+        font-size: 15px;
+        line-height: 135%;
+    }
+    .total-balance_number{
+        font-size: 32px;
+        line-height: 130%;
+    }
+    .info-balance_percent{
+        font-size: 15px;
+        line-height: 135%;
+    }
+    .info-balance_text{
+        font-size: 15px;
+        line-height: 135%;
+    }
+}
+@media (max-width:424.98px) {
+    .balance-card{
+        width: 315px;
+    }
+}
+
+// ================================
+
+.bar {
+    width: 50px;
+    border-radius: 5px;
+    background-color: #EC755D;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    &:hover{
+        opacity: 0.7;
+    }
+}
+
+.card-balance_block{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    transition: all 0.3s ease 0s;
+}
+.bar-day {
+    font-size: 15px;
+    color: #92857A;
+}
+.bar-today {
+    background-color: #76B5BC;
+}
+.bar-amount {
+    display: none;
+}
+.bar-item:hover .bar-amount {
+    display: block;
+    width: 75px;
+    height: 40px;
+    background-color: variables.$brown950;
+    color: variables.$white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 18px;
+    line-height: 125%;
+    letter-spacing: 0px;
+    font-weight: 700;
+}
+.bar-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    transition: all 0.3s ease 0s;
+
+}
+.bar-amount {
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease 0s;
+    
 }
